@@ -1,4 +1,4 @@
-# FPC365 — Fluent Persian Converter 365
+# <img width="64" src="https://github.com/user-attachments/assets/11d3d416-95f9-492b-ba89-d4c14a74a18a" alt="FPC365 icon">  FPC365 — Fluent Persian Converter 365
 
 A Chrome/Edge (Manifest V3) extension that converts Gregorian dates on Microsoft
 platforms — Dynamics 365, SharePoint, OneDrive, Office, Outlook, Teams — into the

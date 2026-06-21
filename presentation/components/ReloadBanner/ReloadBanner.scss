@@ -1,0 +1,152 @@
+// ---------------------------------------------------------------------------
+// "Refresh to apply changes" banner.
+//
+// This is injected into arbitrary Microsoft host pages, so every rule is fully
+// isolated (`all: initial`) and forced with `!important` to survive the host's
+// CSS. Compiled into dist/content.css via presentation/content.scss.
+// ---------------------------------------------------------------------------
+@use "../../generic/generic" as g;
+
+$banner-id: "fpc365-refresh-banner";
+
+##{$banner-id} {
+	all: initial;
+	position: fixed !important;
+	left: 50% !important;
+	bottom: 24px !important;
+	transform: translateX(-50%) translateY(8px) !important;
+	z-index: #{g.$z-banner} !important;
+	box-sizing: border-box !important;
+	display: flex !important;
+	align-items: center !important;
+	gap: 12px !important;
+	max-width: calc(100vw - 32px) !important;
+	padding: 10px 12px 10px 16px !important;
+	font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
+	font-size: 14px !important;
+	line-height: 20px !important;
+	color: g.$fg !important;
+	background: g.$surface !important;
+	border: 1px solid #e0e0e0 !important;
+	border-radius: 8px !important;
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.12), 0 14px 28px rgba(0, 0, 0, 0.24) !important;
+	opacity: 0;
+	transition: opacity 0.15s ease, transform 0.15s ease !important;
+
+	&.fpc365-visible {
+		opacity: 1 !important;
+		transform: translateX(-50%) translateY(0) !important;
+	}
+
+	* {
+		box-sizing: border-box !important;
+	}
+
+	.fpc365-icon {
+		flex: none !important;
+		width: 20px !important;
+		height: 20px !important;
+		color: g.$brand !important;
+		display: inline-flex !important;
+	}
+
+	.fpc365-text {
+		flex: 1 1 auto !important;
+		color: g.$fg !important;
+		font-weight: 400 !important;
+	}
+
+	.fpc365-actions {
+		display: inline-flex !important;
+		align-items: center !important;
+		gap: 8px !important;
+		flex: none !important;
+	}
+
+	button {
+		font-family: inherit !important;
+		font-size: 14px !important;
+		line-height: 20px !important;
+		cursor: pointer !important;
+		border-radius: 4px !important;
+		min-height: 32px !important;
+		padding: 5px 12px !important;
+		font-weight: 600 !important;
+		margin: 0 !important;
+
+		&:focus-visible {
+			outline: 2px solid #000 !important;
+			outline-offset: 2px !important;
+		}
+	}
+
+	.fpc365-primary {
+		background: g.$brand !important;
+		color: #ffffff !important;
+		border: 1px solid transparent !important;
+		transition: background 0.1s ease !important;
+
+		&:hover {
+			background: g.$brand-hover !important;
+		}
+		&:active {
+			background: g.$brand-pressed !important;
+		}
+	}
+
+	.fpc365-subtle {
+		background: transparent !important;
+		color: #424242 !important;
+		border: 1px solid transparent !important;
+		transition: background 0.1s ease, color 0.1s ease !important;
+
+		&:hover {
+			background: g.$surface-2 !important;
+			color: g.$fg !important;
+		}
+	}
+
+	&[dir="rtl"] {
+		padding: 10px 16px 10px 12px !important;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	##{$banner-id} {
+		color: #ffffff !important;
+		background: #292929 !important;
+		border-color: #525252 !important;
+		box-shadow: 0 0 8px rgba(0, 0, 0, 0.24), 0 14px 28px rgba(0, 0, 0, 0.4) !important;
+
+		.fpc365-icon {
+			color: #479ef5 !important;
+		}
+		.fpc365-text {
+			color: #ffffff !important;
+		}
+		.fpc365-primary {
+			background: g.$brand-hover !important;
+
+			&:hover {
+				background: g.$brand !important;
+			}
+		}
+		.fpc365-subtle {
+			color: #d6d6d6 !important;
+
+			&:hover {
+				background: #383838 !important;
+				color: #ffffff !important;
+			}
+		}
+		button:focus-visible {
+			outline-color: #fff !important;
+		}
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	##{$banner-id} {
+		transition: none !important;
+	}
+}

@@ -1,0 +1,63 @@
+{
+	"manifest_version": 3,
+	"name": "FPC365 - Fluent Persian Converter 365",
+	"version": "1.2.1",
+	"description": "Converts Gregorian dates in Microsoft platform to the Persian (Jalali) calendar and translates English text to Persian.",
+	"permissions": ["storage", "tabs"],
+	"host_permissions": [
+		"https://*.dynamics.com/*",
+		"https://*.dynamics.cn/*",
+		"https://*.microsoftdynamics.com/*",
+		"https://*.sharepoint.com/*",
+		"https://*.sharepoint.cn/*",
+		"https://*.onedrive.live.com/*",
+		"https://*.onedrive.com/*",
+		"https://www.office.com/*",
+		"https://office.com/*",
+		"https://outlook.live.com/*",
+		"https://*.teams.microsoft.com/*",
+		"https://teams.microsoft.com/*",
+		"https://*.cloud.microsoft/*"
+	],
+	"icons": {
+		"16": "icons/icon16.png",
+		"48": "icons/icon48.png",
+		"128": "icons/icon128.png"
+	},
+	"action": {
+		"default_popup": "popup.html",
+		"default_icon": {
+			"16": "icons/icon16.png",
+			"48": "icons/icon48.png"
+		},
+		"default_title": "FPC365 - Fluent Persian Converter 365"
+	},
+	"options_ui": {
+		"page": "options.html",
+		"open_in_tab": true
+	},
+	"options_page": "options.html",
+	"content_scripts": [
+		{
+			"matches": [
+				"https://*.dynamics.com/*",
+				"https://*.dynamics.cn/*",
+				"https://*.microsoftdynamics.com/*",
+				"https://*.sharepoint.com/*",
+				"https://*.sharepoint.cn/*",
+				"https://*.onedrive.live.com/*",
+				"https://*.onedrive.com/*",
+				"https://www.office.com/*",
+				"https://office.com/*",
+				"https://outlook.live.com/*",
+				"https://*.teams.microsoft.com/*",
+				"https://teams.microsoft.com/*",
+				"https://*.cloud.microsoft/*"
+			],
+			"js": ["content.js"],
+			"css": ["content.css"],
+			"run_at": "document_idle",
+			"all_frames": true
+		}
+	]
+}

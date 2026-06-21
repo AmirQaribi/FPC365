@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FPC365</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+
+  <body>
+    <div class="popup">
+      <header class="popup-header">
+        <div class="brand">
+          <img
+            class="brand-badge"
+            src="icons/icon128.png"
+            alt=""
+            aria-hidden="true"
+          />
+          <div class="brand-text">
+            <h1 class="brand-title" data-i18n="appTitle">
+              Fluent Persian Converter 365
+            </h1>
+            <p class="brand-subtitle" data-i18n="sectionDescription">
+              Persian calendar &amp; translation for Dynamics 365
+            </p>
+          </div>
+        </div>
+        <!-- Label/lang are set by popup.ts (setInterfaceLanguageButton overwrites textContent). -->
+        <!-- <button id="interfaceLangToggle" class="interface-lang-card" type="button" aria-pressed="false"
+				tabindex="0"></button> -->
+      </header>
+
+      <main class="popup-body">
+        <section class="card master-card">
+				<div id="siteStatus" class="status-pill" data-i18n="siteStatusChecking">Checking current site</div>
+        </section>
+      </main>
+
+      <footer class="popup-footer">
+        <button
+          id="openOptions"
+          class="primary-button"
+          type="button"
+          data-i18n="openSettings"
+        >
+          Open settings
+        </button>
+        <span id="appVersion" class="app-version"></span>
+      </footer>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+{
+	"name": "fpc365-microsoft-persian-converter",
+	"version": "1.2.1",
+	"description": "Converts Gregorian dates on Microsoft platforms to the Persian (Jalali) calendar and translates English UI text to Persian. Chrome/Edge MV3 extension.",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"typecheck": "tsc --noEmit",
+		"build": "node scripts/vite-build.mjs",
+		"build:esbuild": "node scripts/build.mjs",
+		"build:check": "npm run typecheck && npm run build",
+		"dev": "node scripts/build.mjs --watch",
+		"watch": "node scripts/build.mjs --watch",
+		"test": "vitest run",
+		"test:watch": "vitest",
+		"coverage": "vitest run --coverage"
+	},
+	"devDependencies": {
+		"@types/chrome": "^0.0.268",
+		"@vitest/coverage-v8": "^4.1.9",
+		"esbuild": "^0.28.1",
+		"jsdom": "^24.1.0",
+		"sass": "^1.77.0",
+		"typescript": "^5.4.5",
+		"vite": "^8.0.16",
+		"vitest": "^4.1.9"
+	}
+}

@@ -1,0 +1,13 @@
+// ---------------------------------------------------------------------------
+// Content-script stylesheet entry point. Compiles to dist/content.css and is
+// injected into supported Microsoft pages alongside content.js.
+//
+// It bundles every style the injected UI needs:
+//   - converted text / input / tooltip styling
+//   - the embedded Persian datepicker
+//   - the "reload to apply" banner
+// ---------------------------------------------------------------------------
+
+@use "./content-text";
+@use "./components/datepicker/datepicker";
+@use "./components/ReloadBanner/ReloadBanner";

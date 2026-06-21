@@ -1,0 +1,970 @@
+@import url('https://cdn.jsdelivr.net/npm/typeface-iranyekan@0.0.11/index.min.css');
+
+/* ============================================================
+   Fluent UI v9 (Fluent 2) design tokens — Light theme
+   ============================================================ */
+:root {
+	color-scheme: light dark;
+
+    /* Semantic status (Fluent v9) — Light */
+	--colorStatusSuccessForeground1: #0e700e;
+	--colorStatusSuccessBackground2: #f1faf1;
+	--colorStatusSuccessBorder2: #9fd89f;
+	--colorStatusSuccessIndicator: #107c10;
+
+	--colorStatusDangerForeground1: #b10e1c;
+	--colorStatusDangerBackground2: #fdf3f4;
+	--colorStatusDangerBorder2: #f1bbbc;
+	--colorStatusDangerIndicator: #c50f1f;
+
+	/* Typography */
+	--fontFamilyBase: "Segoe UI", "Segoe UI Web (West European)", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+	--fontFamilyRTL: iranyekan, "Segoe UI", Tahoma, sans-serif;
+
+	--fontSizeBase200: 12px;
+	--fontSizeBase300: 14px;
+	--fontSizeBase400: 16px;
+	--fontSizeBase500: 20px;
+	--fontSizeBase600: 24px;
+	--lineHeightBase200: 16px;
+	--lineHeightBase300: 20px;
+	--lineHeightBase400: 22px;
+	--lineHeightBase500: 28px;
+	--lineHeightBase600: 32px;
+
+	--fontWeightRegular: 400;
+	--fontWeightMedium: 500;
+	--fontWeightSemibold: 600;
+
+	/* Radii */
+	--borderRadiusSmall: 2px;
+	--borderRadiusMedium: 4px;
+	--borderRadiusLarge: 6px;
+	--borderRadiusXLarge: 8px;
+	--borderRadiusCircular: 9999px;
+
+	/* Spacing */
+	--spacingS: 8px;
+	--spacingM: 12px;
+	--spacingL: 16px;
+	--spacingXL: 24px;
+
+	/* Neutrals */
+	--colorNeutralBackground1: #ffffff;
+	--colorNeutralBackground1Hover: #f5f5f5;
+	--colorNeutralBackground2: #fafafa;
+	--colorNeutralBackground3: #f0f0f0;
+	--colorNeutralBackgroundCanvas: #f5f5f5;
+	--colorSubtleBackgroundHover: #f5f5f5;
+	--colorSubtleBackgroundPressed: #e0e0e0;
+
+	--colorNeutralForeground1: #242424;
+	--colorNeutralForeground2: #424242;
+	--colorNeutralForeground3: #616161;
+	--colorNeutralForeground4: #707070;
+	--colorNeutralForegroundOnBrand: #ffffff;
+
+	--colorNeutralStroke1: #d1d1d1;
+	--colorNeutralStroke2: #e0e0e0;
+	--colorNeutralStrokeAccessible: #616161;
+	--colorNeutralStrokeAccessibleHover: #575757;
+
+	/* Brand */
+	--colorBrandBackground: #0f6cbd;
+	--colorBrandBackgroundHover: #115ea3;
+	--colorBrandBackgroundPressed: #0c3b5e;
+	--colorCompoundBrandBackground: #0f6cbd;
+	--colorCompoundBrandBackgroundHover: #115ea3;
+	--colorBrandForeground1: #0f6cbd;
+	--colorBrandForeground2: #0f548c;
+	--colorBrandBackground2: #ebf3fc;
+	--colorBrandStroke1: #0f6cbd;
+	--colorBrandStroke2: #b4d6fa;
+
+	--colorStrokeFocus2: #000000;
+
+	/* Shadows */
+	--shadow4: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.14);
+	--shadow8: 0 0 2px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.14);
+	--shadow16: 0 0 2px rgba(0, 0, 0, 0.12), 0 8px 16px rgba(0, 0, 0, 0.14);
+	--shadow28: 0 0 8px rgba(0, 0, 0, 0.12), 0 14px 28px rgba(0, 0, 0, 0.24);
+}
+
+/* ============================================================
+   Fluent UI v9 — Dark theme (auto via system preference)
+   ============================================================ */
+@media (prefers-color-scheme: dark) {
+	:root {
+        --colorStatusSuccessForeground1: #92c353;
+        --colorStatusSuccessBackground2: #052505;
+        --colorStatusSuccessBorder2: #2a4711;
+        --colorStatusSuccessIndicator: #54b054;
+
+        --colorStatusDangerForeground1: #e37d80;
+        --colorStatusDangerBackground2: #3b1113;
+        --colorStatusDangerBorder2: #842226;
+        --colorStatusDangerIndicator: #dc626d;
+
+		--colorNeutralBackground1: #292929;
+		--colorNeutralBackground1Hover: #3d3d3d;
+		--colorNeutralBackground2: #1f1f1f;
+		--colorNeutralBackground3: #141414;
+		--colorNeutralBackgroundCanvas: #141414;
+		--colorSubtleBackgroundHover: #383838;
+		--colorSubtleBackgroundPressed: #2e2e2e;
+
+		--colorNeutralForeground1: #ffffff;
+		--colorNeutralForeground2: #d6d6d6;
+		--colorNeutralForeground3: #adadad;
+		--colorNeutralForeground4: #999999;
+		--colorNeutralForegroundOnBrand: #ffffff;
+
+		--colorNeutralStroke1: #666666;
+		--colorNeutralStroke2: #525252;
+		--colorNeutralStrokeAccessible: #adadad;
+		--colorNeutralStrokeAccessibleHover: #bdbdbd;
+
+		--colorBrandBackground: #115ea3;
+		--colorBrandBackgroundHover: #0f6cbd;
+		--colorBrandBackgroundPressed: #0c3b5e;
+		--colorCompoundBrandBackground: #479ef5;
+		--colorCompoundBrandBackgroundHover: #62abf5;
+		--colorBrandForeground1: #479ef5;
+		--colorBrandForeground2: #62abf5;
+		--colorBrandBackground2: #082338;
+		--colorBrandStroke1: #479ef5;
+		--colorBrandStroke2: #0e4775;
+
+		--colorStrokeFocus2: #ffffff;
+
+		--shadow4: 0 0 2px rgba(0, 0, 0, 0.24), 0 2px 4px rgba(0, 0, 0, 0.28);
+		--shadow8: 0 0 2px rgba(0, 0, 0, 0.24), 0 4px 8px rgba(0, 0, 0, 0.28);
+		--shadow16: 0 0 2px rgba(0, 0, 0, 0.24), 0 8px 16px rgba(0, 0, 0, 0.28);
+		--shadow28: 0 0 8px rgba(0, 0, 0, 0.24), 0 14px 28px rgba(0, 0, 0, 0.4);
+	}
+}
+
+/* ============================================================
+   Base
+   ============================================================ */
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	width: auto;
+	min-height: 100%;
+	margin: 0;
+	padding: 0;
+	background: var(--colorNeutralBackgroundCanvas);
+	color: var(--colorNeutralForeground1);
+	font-family: var(--fontFamilyBase);
+	font-size: var(--fontSizeBase300);
+	line-height: var(--lineHeightBase300);
+	-webkit-font-smoothing: antialiased;
+}
+
+body {
+	padding: var(--spacingXL);
+}
+
+body[dir="rtl"] {
+	direction: rtl;
+	font-family: var(--fontFamilyRTL);
+}
+
+.options-shell {
+	max-width: 980px;
+	margin: 0 auto;
+}
+
+/* ============================================================
+   Header
+   ============================================================ */
+.options-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 18px;
+	margin-bottom: var(--spacingXL);
+	flex-wrap: wrap;
+}
+.brand-badge{
+	height: 68px;
+}
+.options-header__title-group {
+	flex: 1;
+	min-width: 0;
+}
+
+.options-header h1 {
+	font-size: var(--fontSizeBase600);
+	line-height: var(--lineHeightBase600);
+	font-weight: var(--fontWeightSemibold);
+	margin: 0 0 var(--spacingS);
+	color: var(--colorNeutralForeground1);
+}
+
+.section-description {
+	max-width: 720px;
+	margin: 0;
+	font-size: var(--fontSizeBase300);
+	line-height: var(--lineHeightBase400);
+	color: var(--colorNeutralForeground3);
+}
+
+body[dir="rtl"] .options-header__title-group,
+body[dir="rtl"] .section-top,
+body[dir="rtl"] .section-description {
+	text-align: right;
+}
+
+/* ============================================================
+   Card (Fluent v9 Card)
+   ============================================================ */
+.card {
+	background: var(--colorNeutralBackground1);
+	border: 1px solid var(--colorNeutralStroke2);
+	border-radius: var(--borderRadiusXLarge);
+	box-shadow: var(--shadow4);
+	padding: var(--spacingXL);
+}
+
+.top-section-grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: var(--spacingL);
+	margin-bottom: var(--spacingL);
+}
+
+.section-top {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: var(--spacingM);
+	margin-bottom: var(--spacingL);
+	flex-wrap: wrap;
+}
+
+.section-title {
+	font-size: var(--fontSizeBase500);
+	line-height: var(--lineHeightBase500);
+	font-weight: var(--fontWeightSemibold);
+	margin-bottom: 4px;
+	color: var(--colorNeutralForeground1);
+}
+
+.section-subtitle {
+	font-size: var(--fontSizeBase400);
+	line-height: var(--lineHeightBase400);
+	font-weight: var(--fontWeightSemibold);
+	margin-bottom: 4px;
+	color: var(--colorNeutralForeground1);
+}
+
+.section-note {
+	color: var(--colorNeutralForeground3);
+	font-size: var(--fontSizeBase300);
+	line-height: var(--lineHeightBase400);
+	max-width: 720px;
+}
+
+/* ============================================================
+   Badge (Fluent v9 Badge)
+   ============================================================ */
+.feature-badge {
+	display: inline-flex;
+	align-items: center;
+	padding: 2px 10px;
+	height: 24px;
+	border-radius: var(--borderRadiusCircular);
+	background: var(--colorNeutralBackground3);
+	color: var(--colorNeutralForeground3);
+	font-size: var(--fontSizeBase200);
+	font-weight: var(--fontWeightSemibold);
+	white-space: nowrap;
+}
+
+.feature-badge--brand {
+	background: var(--colorBrandBackground2);
+	color: var(--colorBrandForeground2);
+}
+
+.status-pill {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 2px 10px;
+	height: 24px;
+	border-radius: var(--borderRadiusCircular);
+	background: var(--colorBrandBackground2);
+	color: var(--colorBrandForeground2);
+	font-size: var(--fontSizeBase200);
+	font-weight: var(--fontWeightSemibold);
+}
+
+/* ============================================================
+   Selectable mode cards (Fluent v9 selectable card pattern)
+   ============================================================ */
+.mode-cards {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: var(--spacingM);
+	margin-bottom: var(--spacingL);
+}
+
+.mode-card {
+	position: relative;
+	display: flex;
+	align-items: flex-start;
+	gap: var(--spacingM);
+	padding: var(--spacingL);
+	border: 1px solid var(--colorNeutralStroke1);
+	border-radius: var(--borderRadiusLarge);
+	background: var(--colorNeutralBackground1);
+	cursor: pointer;
+	transition: background .1s ease, border-color .1s ease, box-shadow .1s ease;
+}
+
+.mode-card:hover {
+	background: var(--colorNeutralBackground1Hover);
+	border-color: var(--colorNeutralStrokeAccessible);
+}
+
+.mode-card:focus-visible {
+	outline: 2px solid var(--colorStrokeFocus2);
+	outline-offset: 2px;
+}
+
+.mode-card.selected {
+	border-color: var(--colorBrandStroke1);
+	box-shadow: inset 0 0 0 1px var(--colorBrandStroke1);
+	background: var(--colorBrandBackground2);
+}
+
+.mode-icon {
+	flex: none;
+	color: var(--colorNeutralForeground3);
+	display: inline-flex;
+}
+
+.mode-card.selected .mode-icon {
+	color: var(--colorBrandForeground1);
+}
+
+.mode-body {
+	min-width: 0;
+}
+
+.mode-title {
+	font-size: var(--fontSizeBase300);
+	font-weight: var(--fontWeightSemibold);
+	color: var(--colorNeutralForeground1);
+	margin-bottom: 2px;
+}
+
+.mode-desc {
+	font-size: var(--fontSizeBase200);
+	line-height: var(--lineHeightBase200);
+	color: var(--colorNeutralForeground3);
+}
+
+.mode-check {
+	position: absolute;
+	top: var(--spacingM);
+	inset-inline-end: var(--spacingM);
+	width: 20px;
+	height: 20px;
+	border-radius: var(--borderRadiusCircular);
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	background: var(--colorCompoundBrandBackground);
+	color: var(--colorNeutralForegroundOnBrand);
+	opacity: 0;
+	transform: scale(.6);
+	transition: opacity .1s ease, transform .1s ease;
+}
+
+.mode-card.selected .mode-check {
+	opacity: 1;
+	transform: scale(1);
+}
+
+/* ============================================================
+   Settings rows
+   ============================================================ */
+.setting-panel {
+	display: grid;
+	gap: var(--spacingL);
+}
+
+.control-row {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: var(--spacingL);
+}
+
+.control-copy {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+	min-width: 0;
+}
+
+.control-label {
+	font-size: var(--fontSizeBase300);
+	font-weight: var(--fontWeightSemibold);
+	color: var(--colorNeutralForeground1);
+}
+
+.control-description {
+	font-size: var(--fontSizeBase200);
+	line-height: var(--lineHeightBase200);
+	color: var(--colorNeutralForeground3);
+}
+
+.setting-group {
+	border-top: 1px solid var(--colorNeutralStroke2);
+	padding-top: var(--spacingL);
+}
+
+/* ============================================================
+   Switch (Fluent v9 Switch)
+   ============================================================ */
+.fluent-switch {
+	position: relative;
+	display: inline-flex;
+	flex: none;
+	width: 40px;
+	height: 20px;
+	cursor: pointer;
+}
+
+.fluent-switch input {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	opacity: 0;
+	cursor: pointer;
+}
+
+.switch-track {
+	position: absolute;
+	inset: 0;
+	border-radius: var(--borderRadiusCircular);
+	border: 1px solid var(--colorNeutralStrokeAccessible);
+	background: transparent;
+	transition: background .1s ease, border-color .1s ease;
+}
+
+.switch-thumb {
+	position: absolute;
+	top: 50%;
+	inset-inline-start: 3px;
+	transform: translateY(-50%);
+	width: 14px;
+	height: 14px;
+	border-radius: var(--borderRadiusCircular);
+	background: var(--colorNeutralStrokeAccessible);
+	transition: inset-inline-start .1s ease, background .1s ease;
+}
+
+.fluent-switch:hover .switch-track {
+	border-color: var(--colorNeutralStrokeAccessibleHover);
+}
+
+.fluent-switch:hover .switch-thumb {
+	background: var(--colorNeutralStrokeAccessibleHover);
+}
+
+.fluent-switch input:checked + .switch-track {
+	background: var(--colorCompoundBrandBackground);
+	border-color: var(--colorCompoundBrandBackground);
+}
+
+.fluent-switch input:checked + .switch-track .switch-thumb {
+	inset-inline-start: 23px;
+	background: var(--colorNeutralForegroundOnBrand);
+}
+
+.fluent-switch:hover input:checked + .switch-track {
+	background: var(--colorCompoundBrandBackgroundHover);
+	border-color: var(--colorCompoundBrandBackgroundHover);
+}
+
+.fluent-switch input:focus-visible + .switch-track {
+	outline: 2px solid var(--colorStrokeFocus2);
+	outline-offset: 2px;
+}
+
+/* ============================================================
+   Preview
+   ============================================================ */
+.preview-card {
+	align-items: center;
+	background: var(--colorNeutralBackground2);
+	border: 1px solid var(--colorNeutralStroke2);
+	border-radius: var(--borderRadiusLarge);
+	padding: var(--spacingL);
+}
+
+.preview-group {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacingM);
+}
+
+.preview-header {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: var(--spacingM);
+}
+
+.preview-title {
+	font-size: var(--fontSizeBase300);
+	font-weight: var(--fontWeightSemibold);
+	color: var(--colorNeutralForeground1);
+}
+
+.preview-description {
+	font-size: var(--fontSizeBase200);
+	line-height: var(--lineHeightBase200);
+	color: var(--colorNeutralForeground3);
+	margin-top: 2px;
+}
+
+.preview-value {
+	font-size: var(--fontSizeBase600);
+	line-height: var(--lineHeightBase600);
+	font-weight: var(--fontWeightSemibold);
+	color: var(--colorBrandForeground1);
+	font-variant-numeric: tabular-nums;
+}
+
+/* ============================================================
+   Dictionary list
+   ============================================================ */
+.dictionary-grid {
+	display: grid;
+	gap: var(--spacingM);
+	margin-top: var(--spacingL);
+}
+
+.dictionary-item {
+	display: grid;
+	grid-template-columns: 1fr auto;
+	gap: var(--spacingM);
+	align-items: center;
+	padding: var(--spacingM) var(--spacingL);
+	background: var(--colorNeutralBackground1);
+	border: 1px solid var(--colorNeutralStroke2);
+	border-radius: var(--borderRadiusLarge);
+	transition: border-color .1s ease, box-shadow .1s ease, background .1s ease;
+}
+
+.dictionary-item:hover {
+	background: var(--colorNeutralBackground1Hover);
+}
+
+.dictionary-item--active {
+	border-color: var(--colorBrandStroke1);
+	box-shadow: inset 0 0 0 1px var(--colorBrandStroke1);
+	background: var(--colorBrandBackground2);
+}
+
+.dictionary-meta {
+	display: flex;
+	align-items: center;
+	gap: var(--spacingM);
+	min-width: 0;
+}
+
+.dictionary-icon {
+	width: 40px;
+	height: 40px;
+	flex: none;
+	display: grid;
+	place-items: center;
+	border-radius: var(--borderRadiusMedium);
+	background: var(--colorBrandBackground2);
+	color: var(--colorBrandForeground2);
+	font-weight: var(--fontWeightSemibold);
+	font-size: var(--fontSizeBase300);
+	text-transform: uppercase;
+}
+
+.dictionary-title {
+	color: var(--colorNeutralForeground1);
+	font-size: var(--fontSizeBase300);
+	font-weight: var(--fontWeightSemibold);
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.dictionary-actions {
+	display: flex;
+	align-items: center;
+	gap: var(--spacingS);
+}
+
+/* ============================================================
+   Buttons (Fluent v9)
+   ============================================================ */
+.icon-button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 32px;
+	height: 32px;
+	border-radius: var(--borderRadiusMedium);
+	border: 1px solid var(--colorNeutralStroke1);
+	background: var(--colorNeutralBackground1);
+	color: var(--colorNeutralForeground2);
+	cursor: pointer;
+	transition: background .1s ease, border-color .1s ease, color .1s ease;
+}
+
+.icon-button:hover {
+	background: var(--colorSubtleBackgroundHover);
+	color: var(--colorNeutralForeground1);
+}
+
+.icon-button:active {
+	background: var(--colorSubtleBackgroundPressed);
+}
+
+.icon-button:focus-visible {
+	outline: 2px solid var(--colorStrokeFocus2);
+	outline-offset: 2px;
+}
+
+.primary-button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: var(--spacingS);
+	min-height: 32px;
+	padding: 5px 14px;
+	border: 1px solid transparent;
+	border-radius: var(--borderRadiusMedium);
+	background: var(--colorBrandBackground);
+	color: var(--colorNeutralForegroundOnBrand);
+	font-family: inherit;
+	font-size: var(--fontSizeBase300);
+	font-weight: var(--fontWeightSemibold);
+	cursor: pointer;
+	transition: background .1s ease;
+}
+
+.primary-button:hover {
+	background: var(--colorBrandBackgroundHover);
+}
+
+.primary-button:active {
+	background: var(--colorBrandBackgroundPressed);
+}
+
+.primary-button:focus-visible {
+	outline: 2px solid var(--colorStrokeFocus2);
+	outline-offset: 2px;
+}
+
+/* ============================================================
+   About
+   ============================================================ */
+.about-card p {
+	margin: 0 0 var(--spacingM);
+	color: var(--colorNeutralForeground2);
+	line-height: var(--lineHeightBase400);
+}
+
+.about-card p strong {
+	color: var(--colorNeutralForeground1);
+	font-weight: var(--fontWeightSemibold);
+}
+
+.fluent-link {
+	color: var(--colorBrandForeground1);
+	text-decoration: underline;
+}
+
+.fluent-link:hover {
+	color: var(--colorBrandForeground2);
+}
+
+.about-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--spacingM);
+	align-items: center;
+	margin-top: var(--spacingS);
+}
+
+.version-info {
+	font-size: var(--fontSizeBase200);
+	color: var(--colorNeutralForeground4);
+}
+
+/* ============================================================
+   Floating bar (Fluent v9 FAB + status / notification pills)
+   ============================================================ */
+.floating-bar,
+.floading-bar {
+	position: fixed;
+	inset-block-end: 24px;
+	inset-inline-end: 24px;
+	z-index: 999;
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+	direction: ltr;
+}
+
+body[dir="rtl"] .floating-bar,
+body[dir="rtl"] .floading-bar {
+	direction: rtl;
+}
+
+/* --- Circular FAB: language toggle --- */
+.lang-toggle-button {
+	width: 48px;
+	height: 48px;
+	flex: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: var(--borderRadiusCircular);
+	border: 1px solid var(--colorNeutralStroke1);
+	background: var(--colorNeutralBackground1);
+	color: var(--colorNeutralForeground1);
+	font-family: inherit;
+	font-size: var(--fontSizeBase300);
+	font-weight: var(--fontWeightSemibold);
+	cursor: pointer;
+	box-shadow: var(--shadow16);
+	transition: background .1s ease, transform .1s ease, border-color .1s ease, box-shadow .1s ease;
+}
+
+.lang-toggle-button:hover {
+	background: var(--colorNeutralBackground1Hover);
+	border-color: var(--colorNeutralStrokeAccessible);
+	transform: translateY(-1px);
+	box-shadow: var(--shadow28);
+}
+
+.lang-toggle-button:active {
+	background: var(--colorSubtleBackgroundPressed);
+	transform: translateY(0);
+	box-shadow: var(--shadow8);
+}
+
+.lang-toggle-button:focus-visible {
+	outline: 2px solid var(--colorStrokeFocus2);
+	outline-offset: 2px;
+}
+
+/* --- Status pill (with live status dot) --- */
+.floating-status-box {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	min-height: 36px;
+	padding: 6px 16px;
+	border-radius: var(--borderRadiusCircular);
+	background: var(--colorNeutralBackground1);
+	color: var(--colorNeutralForeground2);
+	border: 1px solid var(--colorNeutralStroke1);
+	box-shadow: var(--shadow16);
+	font-size: var(--fontSizeBase200);
+	font-weight: var(--fontWeightSemibold);
+	white-space: nowrap;
+	cursor: pointer;
+	transition: background .1s ease, transform .1s ease, border-color .1s ease, color .1s ease;
+}
+
+.floating-status-box::before {
+	content: "";
+	width: 8px;
+	height: 8px;
+	flex: none;
+	border-radius: var(--borderRadiusCircular);
+	background: var(--colorNeutralStrokeAccessible);
+}
+
+.floating-status-box:hover {
+	transform: translateY(-1px);
+	box-shadow: var(--shadow28);
+}
+
+.floating-status-box.enabled {
+	background: var(--colorStatusSuccessBackground2);
+	border-color: var(--colorStatusSuccessBorder2);
+	color: var(--colorStatusSuccessForeground1);
+}
+
+.floating-status-box.enabled::before {
+	background: var(--colorStatusSuccessIndicator);
+	box-shadow: 0 0 0 3px color-mix(in srgb, var(--colorStatusSuccessIndicator) 22%, transparent);
+}
+
+.floating-status-box.disabled {
+	background: var(--colorStatusDangerBackground2);
+	border-color: var(--colorStatusDangerBorder2);
+	color: var(--colorStatusDangerForeground1);
+}
+
+.floating-status-box.disabled::before {
+	background: var(--colorStatusDangerIndicator);
+	box-shadow: 0 0 0 3px color-mix(in srgb, var(--colorStatusDangerIndicator) 22%, transparent);
+}
+
+/* --- Update notification pill (brand-tinted) --- */
+.floating-update-box {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	min-height: 36px;
+	padding: 6px 16px;
+	border-radius: var(--borderRadiusCircular);
+	background: var(--colorBrandBackground2);
+	color: var(--colorBrandForeground2);
+	border: 1px solid var(--colorBrandStroke2);
+	box-shadow: var(--shadow16);
+	font-size: var(--fontSizeBase200);
+	font-weight: var(--fontWeightSemibold);
+	white-space: nowrap;
+	cursor: pointer;
+	transition: background .1s ease, transform .1s ease, border-color .1s ease;
+}
+
+/* Upward "update" chevron drawn with CSS, no extra markup */
+.floating-update-box::before {
+	content: "";
+	width: 8px;
+	height: 8px;
+	flex: none;
+	border-left: 2px solid currentColor;
+	border-top: 2px solid currentColor;
+	transform: translateY(1px) rotate(45deg);
+	border-radius: 1px;
+}
+
+.floating-update-box:hover {
+	background: color-mix(in srgb, var(--colorBrandBackground2) 80%, var(--colorBrandStroke2));
+	border-color: var(--colorBrandStroke1);
+	transform: translateY(-1px);
+	box-shadow: var(--shadow28);
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+	.lang-toggle-button,
+	.floating-status-box,
+	.floating-update-box {
+		transition: none;
+	}
+}
+
+/* ============================================================
+   Toast (Fluent v9 surface)
+   ============================================================ */
+.toast-banner {
+	position: fixed;
+	left: 50%;
+	bottom: 24px;
+	transform: translateX(-50%) translateY(8px);
+	background: var(--colorNeutralBackground1);
+	border: 1px solid var(--colorNeutralStroke1);
+	color: var(--colorNeutralForeground1);
+	border-radius: var(--borderRadiusMedium);
+	padding: 12px 16px;
+	box-shadow: var(--shadow28);
+	z-index: 9999;
+	font-size: var(--fontSizeBase300);
+	max-width: 92%;
+	width: min(420px, calc(100% - 32px));
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity .15s ease, transform .15s ease;
+}
+
+.toast-banner.visible {
+	opacity: 1;
+	transform: translateX(-50%) translateY(0);
+}
+
+.hidden {
+	display: none !important;
+}
+
+/* ============================================================
+   Responsive
+   ============================================================ */
+@media (min-width: 980px) {
+	.top-section-grid {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media (max-width: 760px) {
+	body {
+		padding: var(--spacingL);
+	}
+
+	.options-header,
+	.section-top,
+	.mode-cards {
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	.mode-cards {
+		display: grid;
+		grid-template-columns: 1fr;
+	}
+
+	.dictionary-item {
+		grid-template-columns: 1fr;
+	}
+
+	.about-actions {
+		justify-content: stretch;
+	}
+}
+/* "Not implemented yet" overlay for preview-only feature cards. */
+.fpc365-not-implemented {
+	position: relative;
+}
+.fpc365-coming-soon-overlay {
+	position: absolute;
+	inset: 0;
+	z-index: 5;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgba(255, 255, 255, 0.6);
+	border-radius: inherit;
+	cursor: not-allowed;
+	pointer-events: all;
+}
+@media (prefers-color-scheme: dark) {
+	.fpc365-coming-soon-overlay {
+		background: rgba(20, 20, 20, 0.6);
+	}
+}
+.fpc365-coming-soon-badge {
+	padding: 8px 16px;
+	border-radius: 9999px;
+	background: var(--colorNeutralBackground1, #fff);
+	color: var(--colorNeutralForeground1, #242424);
+	font-weight: 600;
+	font-size: 14px;
+	box-shadow: var(--shadow8, 0 4px 8px rgba(0, 0, 0, 0.14));
+}

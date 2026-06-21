@@ -1,0 +1,20 @@
+
+.fpc365-rtl {
+  direction: rtl !important;
+}
+
+.fpc365-persian-converted {
+  direction: rtl !important;
+  unicode-bidi: isolate !important;
+}
+
+.fpc365-persian-input {
+  direction: rtl !important;
+  text-align: right !important;
+}
+
+.fpc365-persian-converted:hover,
+.fpc365-persian-input:hover {
+  direction: rtl !important;
+  cursor: help !important;
+}

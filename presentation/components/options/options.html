@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="color-scheme" content="light dark">
+	<title data-i18n="pageTitle">Persian Calendar Converter — Settings</title>
+	<link rel="stylesheet" href="options.css" />
+</head>
+
+<body>
+	<div class="options-shell">
+		<header class="options-header">
+					<img
+						class="brand-badge"
+						src="icons/icon128.png"
+						alt=""
+						aria-hidden="true"
+					/>
+			<div class="options-header__title-group">
+				<h1 data-i18n="appTitle">Persian Calendar Converter</h1>
+				<p class="section-description" data-i18n="sectionDescription">Control Persian date conversion, preview
+					formatting, and translator for your supported Microsoft applications.</p>
+			</div>
+		</header>
+
+		<main>
+			<div class="top-section-grid">
+				<!-- Date & Time Converter -->
+				<section class="card">
+			
+					<div class="section-top">
+						<div>
+							<div class="section-title" data-i18n="dateTimeConverterTitle">Date and Time Converter</div>
+							<div class="section-note" data-i18n="dateTimeConverterNote">Convert Gregorian dates into Persian
+								calendar format, plus relative values and date controls.</div>
+						</div>
+						<span class="feature-badge feature-badge--brand" data-i18n="coreFeature">Core feature</span>
+					</div>
+
+					<div class="control-row mode-cards">
+						<div class="mode-card" data-mode="gregorian" role="button" tabindex="0">
+							<div class="mode-icon">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+									<rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.5" />
+									<path d="M16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+								</svg>
+							</div>
+							<div class="mode-body">
+								<div class="mode-title" data-i18n="gregorianLabel">Gregorian</div>
+								<div class="mode-desc" data-i18n="gregorianDescription">Disable conversion and show the default site
+									dates.</div>
+							</div>
+							<span class="mode-check" aria-hidden="true">
+								<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4"
+									stroke-linecap="round" stroke-linejoin="round">
+									<path d="M5 12l5 5L20 7" />
+								</svg>
+							</span>
+						</div>
+
+						<div class="mode-card selected" data-mode="persian" role="button" tabindex="0">
+							<div class="mode-icon">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+									<rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.5" />
+									<path d="M16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+								</svg>
+							</div>
+							<div class="mode-body">
+								<div class="mode-title" data-i18n="persianLabel">Persian</div>
+								<div class="mode-desc" data-i18n="persianDescription">Convert Gregorian dates throughout the page.</div>
+							</div>
+							<span class="mode-check" aria-hidden="true">
+								<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4"
+									stroke-linecap="round" stroke-linejoin="round">
+									<path d="M5 12l5 5L20 7" />
+								</svg>
+							</span>
+						</div>
+					</div>
+
+					<div id="dateFeatureOptions" class="setting-panel">
+						<div class="control-row">
+							<div class="control-copy">
+								<strong class="control-label" data-i18n="persianDigitsLabel">Persian digits</strong>
+								<span class="control-description" data-i18n="persianDigitsDescription">Show numbers in Persian
+									numerals.</span>
+							</div>
+							<label class="fluent-switch">
+								<input type="checkbox" id="usePersianDigits">
+								<span class="switch-track"><span class="switch-thumb"></span></span>
+							</label>
+						</div>
+
+						<div class="control-row">
+							<div class="control-copy">
+								<strong class="control-label" data-i18n="persianMonthNamesLabel">Persian month names</strong>
+								<span class="control-description" data-i18n="persianMonthNamesDescription">Replace month numbers with
+									Persian month names.</span>
+							</div>
+							<label class="fluent-switch">
+								<input type="checkbox" id="useMonthNames">
+								<span class="switch-track"><span class="switch-thumb"></span></span>
+							</label>
+						</div>
+
+						<div class="control-row">
+							<div class="control-copy">
+								<strong class="control-label" data-i18n="convertDatePickersLabel">Convert date pickers</strong>
+								<span class="control-description" data-i18n="convertDatePickersDescription">Convert date picker controls
+									into Persian format.</span>
+							</div>
+							<label class="fluent-switch">
+								<input type="checkbox" id="convertDatePickers">
+								<span class="switch-track"><span class="switch-thumb"></span></span>
+							</label>
+						</div>
+
+						<div class="preview-card preview-group">
+							<div class="preview-header">
+								<div>
+									<span class="preview-title" data-i18n="previewTitle">Preview</span>
+									<div class="preview-description" data-i18n="previewDescription">Live preview of the current date
+										formatting based on your settings.</div>
+								</div>
+								<span class="status-pill" id="previewModeLabel">Persian</span>
+							</div>
+							<div id="preview" class="preview-value" dir="rtl">1404/03/07</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- UI Translator -->
+				<section class="card fpc365-not-implemented">
+					<div class="fpc365-coming-soon-overlay" aria-hidden="true">
+						<span class="fpc365-coming-soon-badge">Not implemented yet</span>
+					</div>
+					<div class="section-top">
+						<div>
+							<div class="section-title" data-i18n="translatorTitle">UI Translator (Preview)</div>
+							<div class="section-note" data-i18n="translatorNote">Simulate translation of the UI into Persian. The
+								dictionary manager is a preview for future translation support.</div>
+						</div>
+						<span class="feature-badge" data-i18n="mockupBadge">Preview</span>
+					</div>
+
+					<div class="control-row mode-cards">
+						<div class="mode-card" data-language="default" role="button" tabindex="0">
+							<div class="mode-icon">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+									<rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.5" />
+									<path d="M16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+								</svg>
+							</div>
+							<div class="mode-body">
+								<div class="mode-title" data-i18n="defaultLabel">Default</div>
+								<div class="mode-desc" data-i18n="defaultDescription">Keep the site language unchanged.</div>
+							</div>
+							<span class="mode-check" aria-hidden="true">
+								<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4"
+									stroke-linecap="round" stroke-linejoin="round">
+									<path d="M5 12l5 5L20 7" />
+								</svg>
+							</span>
+						</div>
+
+						<div class="mode-card selected" data-language="persian" role="button" tabindex="0">
+							<div class="mode-icon">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+									<rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.5" />
+									<path d="M16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+								</svg>
+							</div>
+							<div class="mode-body">
+								<div class="mode-title" data-i18n="translatorPersianLabel">Persian</div>
+								<div class="mode-desc" data-i18n="translatorPersianDescription">Translate UI labels into Persian.</div>
+							</div>
+							<span class="mode-check" aria-hidden="true">
+								<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4"
+									stroke-linecap="round" stroke-linejoin="round">
+									<path d="M5 12l5 5L20 7" />
+								</svg>
+							</span>
+						</div>
+					</div>
+
+					<div id="translatorFeatureOptions" class="setting-panel">
+						<div class="control-row">
+							<div class="control-copy">
+								<strong class="control-label" data-i18n="forceRTLLabel">Force RTL website</strong>
+								<span class="control-description" data-i18n="forceRTLDescription">Apply a right-to-left layout for the
+									translated UI.</span>
+							</div>
+							<label class="fluent-switch">
+								<input type="checkbox" id="forceRTL">
+								<span class="switch-track"><span class="switch-thumb"></span></span>
+							</label>
+						</div>
+
+						<div class="setting-group">
+							<div class="section-top">
+								<div>
+									<div class="section-subtitle" data-i18n="manageDictionaryTitle">Manage dictionary</div>
+									<div class="section-note" data-i18n="manageDictionaryNote">Download and manage dictionaries</div>
+								</div>
+							</div>
+
+							<div class="dictionary-grid">
+								<div class="dictionary-item" data-dict="dynamics365">
+									<div class="dictionary-meta">
+										<div class="dictionary-icon">D</div>
+										<strong class="dictionary-title">Dynamics 365</strong>
+									</div>
+									<div class="dictionary-actions">
+										<button class="icon-button download-button" type="button" data-dict="dynamics365" title="Download"
+											data-i18n-title="downloadTitle">
+											<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+												stroke-linecap="round" stroke-linejoin="round">
+												<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+												<polyline points="7 10 12 15 17 10" />
+												<line x1="12" y1="15" x2="12" y2="3" />
+											</svg>
+										</button>
+										<button class="icon-button toggle-button hidden" type="button" data-dict="dynamics365"
+											title="Enable / disable" data-i18n-title="toggleTitle">
+											<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+												stroke-linecap="round" stroke-linejoin="round">
+												<path d="M5 12l5 5L20 7" />
+											</svg>
+										</button>
+										<button class="icon-button clear-button hidden" type="button" data-dict="dynamics365" title="Clear"
+											data-i18n-title="clearTitle">
+											<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+												stroke-linecap="round" stroke-linejoin="round">
+												<polyline points="3 6 5 6 21 6" />
+												<path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6" />
+												<path d="M10 11v6" />
+												<path d="M14 11v6" />
+												<path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2" />
+											</svg>
+										</button>
+									</div>
+								</div>
+
+								<div class="dictionary-item" data-dict="salesHub">
+									<div class="dictionary-meta">
+										<div class="dictionary-icon">S</div>
+										<strong class="dictionary-title">Dynamics 365 sales-hub</strong>
+									</div>
+									<div class="dictionary-actions">
+										<button class="icon-button download-button" type="button" data-dict="salesHub" title="Download"
+											data-i18n-title="downloadTitle">
+											<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+												stroke-linecap="round" stroke-linejoin="round">
+												<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+												<polyline points="7 10 12 15 17 10" />
+												<line x1="12" y1="15" x2="12" y2="3" />
+											</svg>
+										</button>
+										<button class="icon-button toggle-button hidden" type="button" data-dict="salesHub"
+											title="Enable / disable" data-i18n-title="toggleTitle">
+											<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+												stroke-linecap="round" stroke-linejoin="round">
+												<path d="M5 12l5 5L20 7" />
+											</svg>
+										</button>
+										<button class="icon-button clear-button hidden" type="button" data-dict="salesHub" title="Clear"
+											data-i18n-title="clearTitle">
+											<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+												stroke-linecap="round" stroke-linejoin="round">
+												<polyline points="3 6 5 6 21 6" />
+												<path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6" />
+												<path d="M10 11v6" />
+												<path d="M14 11v6" />
+												<path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2" />
+											</svg>
+										</button>
+									</div>
+								</div>
+
+								<div class="dictionary-item" data-dict="fieldService">
+									<div class="dictionary-meta">
+										<div class="dictionary-icon">F</div>
+										<strong class="dictionary-title">Dynamics 365 field-service</strong>
+									</div>
+									<div class="dictionary-actions">
+										<button class="icon-button download-button" type="button" data-dict="fieldService" title="Download"
+											data-i18n-title="downloadTitle">
+											<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+												stroke-linecap="round" stroke-linejoin="round">
+												<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+												<polyline points="7 10 12 15 17 10" />
+												<line x1="12" y1="15" x2="12" y2="3" />
+											</svg>
+										</button>
+										<button class="icon-button toggle-button hidden" type="button" data-dict="fieldService"
+											title="Enable / disable" data-i18n-title="toggleTitle">
+											<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+												stroke-linecap="round" stroke-linejoin="round">
+												<path d="M5 12l5 5L20 7" />
+											</svg>
+										</button>
+										<button class="icon-button clear-button hidden" type="button" data-dict="fieldService" title="Clear"
+											data-i18n-title="clearTitle">
+											<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+												stroke-linecap="round" stroke-linejoin="round">
+												<polyline points="3 6 5 6 21 6" />
+												<path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6" />
+												<path d="M10 11v6" />
+												<path d="M14 11v6" />
+												<path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2" />
+											</svg>
+										</button>
+									</div>
+								</div>
+
+								<div class="dictionary-item" data-dict="oneDrive">
+									<div class="dictionary-meta">
+										<div class="dictionary-icon">O</div>
+										<strong class="dictionary-title">OneDrive</strong>
+									</div>
+									<div class="dictionary-actions">
+										<button class="icon-button download-button" type="button" data-dict="oneDrive" title="Download"
+											data-i18n-title="downloadTitle">
+											<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+												stroke-linecap="round" stroke-linejoin="round">
+												<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+												<polyline points="7 10 12 15 17 10" />
+												<line x1="12" y1="15" x2="12" y2="3" />
+											</svg>
+										</button>
+										<button class="icon-button toggle-button hidden" type="button" data-dict="oneDrive"
+											title="Enable / disable" data-i18n-title="toggleTitle">
+											<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+												stroke-linecap="round" stroke-linejoin="round">
+												<path d="M5 12l5 5L20 7" />
+											</svg>
+										</button>
+										<button class="icon-button clear-button hidden" type="button" data-dict="oneDrive" title="Clear"
+											data-i18n-title="clearTitle">
+											<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+												stroke-linecap="round" stroke-linejoin="round">
+												<polyline points="3 6 5 6 21 6" />
+												<path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6" />
+												<path d="M10 11v6" />
+												<path d="M14 11v6" />
+												<path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2" />
+											</svg>
+										</button>
+									</div>
+								</div>
+
+								<div class="dictionary-item" data-dict="sharePoint">
+									<div class="dictionary-meta">
+										<div class="dictionary-icon">S</div>
+										<strong class="dictionary-title">SharePoint</strong>
+									</div>
+									<div class="dictionary-actions">
+										<button class="icon-button download-button" type="button" data-dict="sharePoint" title="Download"
+											data-i18n-title="downloadTitle">
+											<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+												stroke-linecap="round" stroke-linejoin="round">
+												<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+												<polyline points="7 10 12 15 17 10" />
+												<line x1="12" y1="15" x2="12" y2="3" />
+											</svg>
+										</button>
+										<button class="icon-button toggle-button hidden" type="button" data-dict="sharePoint"
+											title="Enable / disable" data-i18n-title="toggleTitle">
+											<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+												stroke-linecap="round" stroke-linejoin="round">
+												<path d="M5 12l5 5L20 7" />
+											</svg>
+										</button>
+										<button class="icon-button clear-button hidden" type="button" data-dict="sharePoint" title="Clear"
+											data-i18n-title="clearTitle">
+											<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+												stroke-linecap="round" stroke-linejoin="round">
+												<polyline points="3 6 5 6 21 6" />
+												<path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6" />
+												<path d="M10 11v6" />
+												<path d="M14 11v6" />
+												<path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2" />
+											</svg>
+										</button>
+									</div>
+								</div>
+
+								<div class="dictionary-item" data-dict="teams">
+									<div class="dictionary-meta">
+										<div class="dictionary-icon">T</div>
+										<strong class="dictionary-title">Microsoft Teams</strong>
+									</div>
+									<div class="dictionary-actions">
+										<button class="icon-button download-button" type="button" data-dict="teams" title="Download"
+											data-i18n-title="downloadTitle">
+											<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+												stroke-linecap="round" stroke-linejoin="round">
+												<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+												<polyline points="7 10 12 15 17 10" />
+												<line x1="12" y1="15" x2="12" y2="3" />
+											</svg>
+										</button>
+										<button class="icon-button toggle-button hidden" type="button" data-dict="teams"
+											title="Enable / disable" data-i18n-title="toggleTitle">
+											<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+												stroke-linecap="round" stroke-linejoin="round">
+												<path d="M5 12l5 5L20 7" />
+											</svg>
+										</button>
+										<button class="icon-button clear-button hidden" type="button" data-dict="teams" title="Clear"
+											data-i18n-title="clearTitle">
+											<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+												stroke-linecap="round" stroke-linejoin="round">
+												<polyline points="3 6 5 6 21 6" />
+												<path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6" />
+												<path d="M10 11v6" />
+												<path d="M14 11v6" />
+												<path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2" />
+											</svg>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+
+			<!-- About -->
+			<section class="card about-card">
+				<div class="section-top">
+					<div>
+						<div class="section-title" data-i18n="aboutTitle">About</div>
+					</div>
+					<span class="feature-badge" data-i18n="infoBadge">Info</span>
+				</div>
+				<p data-i18n="aboutSentence1" data-i18n-html="true">This is an <strong>open source</strong> project and is
+					<strong>safe to use</strong>. The entire source code is publicly available for review, transparency, and
+					contribution.</p>
+				<p data-i18n="aboutSentence2">The code is free to use and modify; however, it remains protected under its
+					copyright license.</p>
+				<p data-i18n="aboutSentence4" data-i18n-html="true">Learn more, report issues, or contribute on <a
+						href="https://github.com/AmirQaribi/DynamicsTranslate" target="_blank" rel="noopener"
+						class="fluent-link">GitHub</a>.</p>
+				<div class="about-actions">
+					<button id="donateButton" type="button" class="primary-button" data-i18n="donateButton">Donate</button>
+					<span id="versionInfo" class="version-info"><span data-i18n="versionLabel">Version</span> <span
+							id="appVersion">1.2.1</span></span>
+				</div>
+			</section>
+		</main>
+
+<div class="floating-bar">
+	<!-- <div id="serviceUpdateBox" class="floating-update-box" role="status" aria-live="polite">Update available</div> -->
+	<div id="serviceStatusBox" class="floating-status-box" aria-live="polite"></div>
+	<!-- <div id="interfaceLangToggle" class="floating-status-box" aria-live="polite"></div> -->
+</div>
+
+	<script src="options.js"></script>
+</body>
+
+</html>

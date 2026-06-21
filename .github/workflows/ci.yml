@@ -8,7 +8,7 @@ on:
 
 # Avoid redundant runs on the same ref
 concurrency:
-  group: ci-$ github.workflow -$ github.ref 
+  group: ci-${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -19,16 +19,16 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        node-version: [20.x, 22.x]
+        node-version: ['22.x', '24.x']
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node $ matrix.node-version 
+      - name: Setup Node ${{ matrix.node-version }}
         uses: actions/setup-node@v4
         with:
-          node-version: $ matrix.node-version 
+          node-version: ${{ matrix.node-version }}
           cache: npm
 
       - name: Install dependencies
@@ -44,7 +44,7 @@ jobs:
         run: npm run build
 
       - name: Upload build artifact
-        if: matrix.node-version == '20.x'
+        if: matrix.node-version == '24.x'
         uses: actions/upload-artifact@v4
         with:
           name: fpc365-extension
